@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday!</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+/* Simple fadeIn animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-50px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Confetti circles animation */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffeb3b;
+    border-radius: 50%;
+    animation: confettiFall 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(0) rotate(0deg);}
+    100% { transform: translateY(100vh) rotate(360deg);}
+}
+
+</style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="content">
+    <h1>Happy Birthday!</h1>
+    <p>Wishing my dearest sister a day full of love, laughter & joy! 💖</p>
+</div>
+
+<!-- Optional Confetti -->
+<div class="confetti" style="left:10%; animation-delay:0s;"></div>
+<div class="confetti" style="left:20%; animation-delay:1s;"></div>
+<div class="confetti" style="left:30%; animation-delay:2s;"></div>
+<div class="confetti" style="left:50%; animation-delay:0.5s;"></div>
+<div class="confetti" style="left:70%; animation-delay:1.5s;"></div>
+<div class="confetti" style="left:80%; animation-delay:2.5s;"></div>
+
+</body>
+</html>
